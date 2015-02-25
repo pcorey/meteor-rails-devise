@@ -1,0 +1,19 @@
+<head>
+    <title>rails-test</title>
+</head>
+
+<body>
+    <h1>Welcome to Meteor!</h1>
+    {{#if currentUser}}
+        <p>{{currentUser}}</p>
+    {{else}}
+        <p>Not logged in</p>
+    {{/if}}
+    {{> hello}}
+</body>
+
+<template name="hello">
+    {{#each users}}
+        <p>{{name}} - {{email}}</p>
+    {{/each}}
+</template>
